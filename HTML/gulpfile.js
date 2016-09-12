@@ -166,10 +166,9 @@ gulp.task('htmlOnWeb', function() {
   request('https://www.tempsl.fr', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       // all html code
-      // var regex   = new RegExp('[\?&]utm_' + arg + '=([^&]*)'),
-      // html = html.replace(/link href=\"/g,"link href=\"http:\/\/www.tempsl.fr");
-      // html = html.replace(/(link|img) (href|src)=\"([^\.])/g,"$1 $2=\"http:\/\/www.tempsl.fr/");
+      // regex remplacement des src rel par abs
       html = html.replace(/(src=\"|link=\"|href=\")(\/)([^\.])/g,"$1http://www.tempsl.fr/$3");
+      html = html.replace(/<meta content=\"text\/html; charset=ISO-8859-1\" \/>/,"<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />");
       console.log(html);
       fs.writeFile("dest/index_cheerio.html", html, function(err) {
         if (err) {
