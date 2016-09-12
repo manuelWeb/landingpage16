@@ -1,0 +1,37 @@
+/ shortkey to go styleZL.scss
+/ link[href="../scss/styleZoneLibre.scss" rel="stylesheet" type="text/css"]
+== Slim::Template.new('src/slim/var/_link_zoneLibre.slim').render
+#ctl00_ContentPlaceHolder1_DIV_SITEUNDER.zoneLibre
+  #DIV_SITEUNDER
+
+    span.like-h1
+      | Titre de
+      br/
+      span
+        | Cliente Idéale !
+
+    span.sticker-csoa
+      img src="images/imgZL/sticker-csoa.png" alt=""/
+
+    / a.btn-zlaff href="/link-btn-zlaff"
+    /   | Proﬁtez-en vite !
+
+    .info-zl
+      p
+        | Votre
+        br
+        b
+          | CADEAU
+        br
+        | avec le code
+        span
+          |  XXXX
+
+      a href==($link_cat_aff) onclick==($ga_cat_aff) target="_blank"
+        img src="images/imgZL/catCover.jpg" alt=""/
+      p
+        | Feuilletez le nouveau
+        br/
+        | catalogue !
+        a href==($link_cat_aff) onclick==($ga_cat_btn_aff) target="_blank"
+          |  cliquez ici

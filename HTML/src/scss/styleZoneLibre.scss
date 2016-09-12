@@ -1,0 +1,97 @@
+$font-serif: Georgia, Times, "Times New Roman", serif;
+$font-sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$title-color: #927100; // #927100
+$title-bd-color: #fff; // #927100
+$tle-bd-w: 2px; // #927100
+$white: #fff;
+#DIV_SITEUNDER {
+  position: relative;
+  min-height: 465px;
+  background: #fff url(../images/imgZL/BG_zoneKdo-aff.jpg);
+  .like-h1 {
+    position: absolute;
+    top: 18px; left: 315px;
+    line-height: 125%;
+    text-align: center;
+    background: transparent url(../images/imgZL/title-hr-aff.png) 0 50% no-repeat;
+    font: {
+      family: $font-serif;
+      size: 48px;
+      weight: bold;
+    }
+    color: $title-color;
+    text-shadow: ($tle-bd-w) 0 0 #fff, (-$tle-bd-w) 0 0 #fff, 0 ($tle-bd-w) 0 #fff, 0 (-$tle-bd-w) 0 #fff, ($tle-bd-w)/2 ($tle-bd-w)/2 0 #fff, (-$tle-bd-w)/2 (-$tle-bd-w)/2 0 #fff;
+    span {
+      font: {
+        style: italic;
+        weight: normal;
+      }
+    }
+  }
+  .sticker-csoa {
+    position: absolute;
+    top: 160px; left: 286px;
+  }
+  .btn-zlaff {
+    position: absolute;
+    top: 386px; left: 334px;
+    display: block;
+    width: 238px; height: 59px;
+    line-height: 46px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    background: url(../images/imgZL/btn-zlaff.png);
+  }
+  .info-zl {
+    position: absolute;
+    top: 0; left: 686px;
+    width: 228px; height:465px;
+    text-align: center;
+    font: {
+      family: $font-sans-serif;
+    }
+    color: $white;
+    background: #816B44 url(../images/imgZL/BG_info-aff.jpg);
+    p {
+      margin-top: 18px;
+      line-height: 92%;
+      font: {
+        size: 21px;
+        weight: bold;
+      }
+      b {
+        font-size: 24px;
+        font-weight: bolder;
+        line-height: 106%;
+        // font-variant: small-caps;
+      }
+      span {
+        display: inline-block;
+        height: 40px;
+        padding: 0 36px;
+        margin-top: 14px;
+        line-height: 40px;
+        font-size: 36px;
+        border: 1px solid $white;
+        background-color: #826C45;
+      }
+      &+a+p{
+        margin-top: 12px;
+        line-height: 114%;
+        font-size: 16px;
+        font-weight: normal;
+        a {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+    img {
+      margin-top: 68px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.6);
+    }
+  }
+}
+

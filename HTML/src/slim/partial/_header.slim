@@ -1,0 +1,119 @@
+#header
+  h1
+    span#ctl00_UC_HEADER_LB_ACCROCHE[title="12"]
+      | Accessoires de cuisine et astuces pour la maison : TEMPS L
+  a#ctl00_UC_HEADER_HL_LOGO.logo[onclick="ga('global.send', 'event', 'Logo_HS', 'Logo', document.location.pathname);ga('local.send', 'event', 'Logo_HS', 'Logo', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/index.aspx" style="background:url(./images/Version4/bg_logo.png) no-repeat"]
+  script[type="text/javascript"]
+    |  function validation() { // Freddy Masurelle le 26/09/2012 // gestion de la touche entrée document.getElementById('ctl00_UC_HEADER_UC_RECHERCHE_BTN_RECHERCHE').click(); //bouton OK } // gestion de la suppression d'un caractère // sur la champ autocomplété de la recherche function gestionSuppr(valeur) { if (valeur == 0) { document.getElementById('ctl00_UC_HEADER_UC_RECHERCHE_HID_RECH').value = 'S'; } else document.getElementById('ctl00_UC_HEADER_UC_RECHERCHE_HID_RECH').value = ''; } 
+  .search
+    input#ctl00_UC_HEADER_UC_RECHERCHE_HID_RECH[name="ctl00$UC_HEADER$UC_RECHERCHE$HID_RECH" type="hidden"]
+    input#ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHE.text[name="ctl00$UC_HEADER$UC_RECHERCHE$ACT_RECHERCHE" type="text" value="Rechercher un article ou une référence" onkeypress="javascript:var touche = window.event ? event.keyCode : event.which; if(touche == 226 || touche == 60){event.returnValue = false; return false;}" onkeyup="javascript:var touche = window.event ? event.keyCode : event.which; if(touche == 13) {validation();} if(touche == 46 || touche == 8){gestionSuppr(0);}" onkeydown="javascript:var touche = window.event ? event.keyCode : event.which; if(touche == 46 || touche == 8){gestionSuppr(0);} else{gestionSuppr(1);}" onfocus="if(this.value=='Rechercher un article ou une référence'){ this.value = '';}" onblur="if(this.value==''){ this.value = 'Rechercher un article ou une référence';}"]
+    input#ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHECache[name="ctl00$UC_HEADER$UC_RECHERCHE$ACT_RECHERCHECache" type="hidden"]
+    #ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHEResults[style="display:none;z-index:3000;"]
+
+    script[type="text/javascript"]
+      |  new AjaxDLLAC.Autocompleter("ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHE", "ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHEResults", "/tempsl_et_vous/Affiliation.aspx", "ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHECache", { minChars: 2, widthDIV: -1, frequency: 0 }); 
+    span#ctl00_UC_HEADER_UC_RECHERCHE_UPP_RECHERCHE
+      input#ctl00_UC_HEADER_UC_RECHERCHE_BTN_RECHERCHE.submit[type="submit" name="ctl00$UC_HEADER$UC_RECHERCHE$BTN_RECHERCHE" value="" onclick="ga('global.send', 'event', 'MoteurRecherche_HS', 'OK', document.location.pathname);ga('local.send', 'event', 'MoteurRecherche_HS', 'OK', document.location.pathname);"]
+    #ctl00_UC_HEADER_UC_RECHERCHE_UC_ATTENTE_PRG_UPP_PROGRESS[style="display:none;"]
+      .positionFixedAttente
+      .GifAttente
+  a#ctl00_UC_HEADER_A_NOUS_CONTACTER.contact[href="http://tempslpreprod.as44099.com/fr/tempsl_et_vous/contact.aspx?val=A" title="873" onclick="ga('global.send', 'event', 'NousContacter_HS', 'NousContacter', document.location.pathname);ga('local.send', 'event', 'NousContacter_HS', 'NousContacter', document.location.pathname);"]
+    | Nous contacter
+  .phone
+
+  .phone.phoneFr
+    a#ctl00_UC_HEADER_HL_TEL_FR[onclick="ga('global.send', 'event', 'NousContacter_HS', 'NumTel', document.location.pathname);ga('local.send', 'event', 'NousContacter_HS', 'NumTel', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/tempsl_et_vous/contact.aspx?val=A"]
+    table[border="0" cellpadding="0" cellspacing="0" style="display: inline-block; vertical-align: middle;"]
+      tr
+        td[height="28" style="vertical-align: middle;" valign="middle"]
+          table[border="0" cellpadding="0" cellspacing="0" style="vertical-align: middle;"]
+            tr
+              td[style="vertical-align: middle;" valign="middle"]
+                table[bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="vertical-align: middle;"]
+                  tr
+                    td[bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"]
+                  tr
+                    td.bd-left_1px_ccc.num[align="center" height="24" valign="middle" style="vertical-align: middle; border-left-width: 1px; border-left-color: #CCCCCC; border-left-style: solid; background: url(/images/telephone/sva-left-innerglow.png) no-repeat left 0px; padding: 0 5px;"]
+                      p.sva_num[style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; font-style: normal; text-indent: 0; color: #AF007D; margin: 0; padding: 0; border: none; line-height: normal;"]
+                        span#ctl00_UC_HEADER_UC_TELEPHONE_telNum[title="11"]
+                          | 0 892 461 461
+                  tr
+                    td[bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"]
+              td[bgcolor="#AF007D" style="vertical-align: middle;" valign="middle"]
+                img#c2[alt="" border="0" height="28" src="/images/telephone/sva-c2_payant_prixAppel.png" width="8" style="display: block;"]
+              td[style="vertical-align: middle;" valign="middle"]
+                table[bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="110" style="vertical-align: middle;"]
+                  tr
+                    td[bgcolor="#AF007D" height="1" style="vertical-align: middle;" valign="middle"]
+                  tr
+                    td.txt[bgcolor="#AF007D" height="26" style="vertical-align: middle; padding: 0 5px;" valign="middle"]
+                      p.sva_txt[style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; font-style: normal; text-indent: 0; line-height: 10px; color: #ffffff; margin: 0; padding: 0; border: none; line-height: normal;"]
+                        | Service 
+                        span#ctl00_UC_HEADER_UC_TELEPHONE_currentPrix
+                          | 0.45
+                        | € / min + prix appel
+                  tr
+                    td[bgcolor="#AF007D" height="1" style="vertical-align: middle;" valign="middle"]
+              td[style="vertical-align: middle;" valign="middle"]
+                table[bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="8" style="vertical-align: middle;"]
+                  tr
+                    td[bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"]
+                  tr
+                    td.right-innerglow[height="24" style="vertical-align: middle; border-right-style: solid; border-right-color: #CCCCCC; border-right-width: 1px; background: url(/images/telephone/sva-right-innerglow.png) no-repeat right;" valign="middle"]
+                  tr
+                    td[bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"]
+    input#ctl00_UC_HEADER_UC_TELEPHONE_hf_is_in_footer[type="hidden" name="ctl00$UC_HEADER$UC_TELEPHONE$hf_is_in_footer"]
+  script[type="text/javascript" src="/js/HautMonCompte.js"]
+  .account
+    .open
+      a#ctl00_UC_HEADER_UC_MONCOMPTE_A_MON_COMPTE[href="http://tempslpreprod.as44099.com/fr/compte_client/compte-perso.aspx" title="1" onclick="ga('global.send', 'event', 'MonCompte_HS', 'MonCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', 'MonCompte', document.location.pathname);"]
+        | MON COMPTE
+      .opendiv
+        .int
+          ul
+            li#ctl00_UC_HEADER_UC_MONCOMPTE_LI_ACCES_COMPTE
+              a#ctl00_UC_HEADER_UC_MONCOMPTE_HL_ACCES_COMPTE[title="3" onclick="ga('global.send', 'event', 'MonCompte_HS', 'AccedezCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', 'AccedezCompte', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/compte_client/identification.aspx"]
+                | Accédez à votre compte
+            li#ctl00_UC_HEADER_UC_MONCOMPTE_LI_SUIVI_COMMANDE
+              a#ctl00_UC_HEADER_UC_MONCOMPTE_HL_SUIVI_COMMANDE[title="4" onclick="ga('global.send', 'event', 'MonCompte_HS', 'SuivezCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', 'SuivezCompte', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/compte_client/identification.aspx"]
+                | Suivez vos commandes
+            li#ctl00_UC_HEADER_UC_MONCOMPTE_LI_1ER_VISITE
+              a#ctl00_UC_HEADER_UC_MONCOMPTE_HL_1ER_VISITE.red[title="6" onclick="ga('global.send', 'event', 'MonCompte_HS', '1erevisiteCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', '1erevisiteCompte', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/compte_client/modif-compte.aspx"]
+                | 1ère visite? 
+                br
+                | Créez votre compte !
+      br
+  #layer[style="display: none;"]
+    #boxDeconnexion
+      span#ctl00_UC_HEADER_UC_MONCOMPTE_LAB_DECONNEXION.lib[title="389"]
+        | Déconnexion
+      span#ctl00_UC_HEADER_UC_MONCOMPTE_LAB_TEXTE_AVERTISSEMENT.sLib[title="390"]
+        | Voulez-vous réellement vous déconnecter ? 
+        br
+        |  Attention : toutes vos données non sauvegardées seront perdues !
+      a#ctl00_UC_HEADER_UC_MONCOMPTE_A_ANNULER.btnDeconnect[href="javascript:void(0)" title="391"]
+        | Annuler
+      a#ctl00_UC_HEADER_UC_MONCOMPTE_A_SEDECONNECTER.btnDeconnect[title="392" href="javascript:__doPostBack('ctl00$UC_HEADER$UC_MONCOMPTE$A_SEDECONNECTER','')"]
+        | Se déconnecter
+      .clear
+  script[type="text/javascript" src="/js/PanierHaut.js"]
+  #PanierHaut.basket
+    .open
+      a#ctl00_UC_HEADER_UC_MONPANIER_A_MON_PANIER[href="http://tempslpreprod.as44099.com/fr/commande/panier.aspx" title="7" onclick="ga('global.send', 'event', 'MonPanier_HS', 'MonPanier', document.location.pathname);ga('local.send', 'event', 'MonPanier_HS', 'MonPanier', document.location.pathname);"]
+        | Mon panier
+      #ctl00_UC_HEADER_UC_MONPANIER_UP_PANIER
+        .opendiv
+          .int
+            #ctl00_UC_HEADER_UC_MONPANIER_DIV_PANIER_VIDE.empty
+              span#ctl00_UC_HEADER_UC_MONPANIER_LB_PANIER_VIDE[title="8"]
+                | Votre panier est vide
+              a#ctl00_UC_HEADER_UC_MONPANIER_HL_COMMANDE_RAPIDE[title="9" onclick="ga('global.send', 'event', 'MonPanier_HS', 'CdRefsCata', document.location.pathname);ga('local.send', 'event', 'MonPanier_HS', 'CdRefsCata', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/commande/commande-rapide.aspx"]
+                | Je commande avec les références catalogue
+    #ctl00_UC_HEADER_UC_MONPANIER_UP_NBR_ARTICLE
+      .num
+        span#ctl00_UC_HEADER_UC_MONPANIER_LB_NBR_ARTICLES
+          | 0
+        span#ctl00_UC_HEADER_UC_MONPANIER_LB_ARTICLES[title="10"]
+          | article(s)
+      input#ctl00_UC_HEADER_UC_MONPANIER_HID_NB_LIGNES_PRD[type="hidden" name="ctl00$UC_HEADER$UC_MONPANIER$HID_NB_LIGNES_PRD" value="0"]

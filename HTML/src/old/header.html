@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>HEADER</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <link href="./css/styleV4.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="header">
+    <h1>
+      <span id="ctl00_UC_HEADER_LB_ACCROCHE" title="12">Accessoires de cuisine et astuces pour la maison : TEMPS L</span>
+    </h1>
+    <a id="ctl00_UC_HEADER_HL_LOGO" class="logo" onclick="ga('global.send', 'event', 'Logo_HS', 'Logo', document.location.pathname);ga('local.send', 'event', 'Logo_HS', 'Logo', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/index.aspx" style="background:url(./images/Version4/bg_logo.png) no-repeat"></a>
+    <script type="text/javascript">
+    function validation() {
+      // Freddy Masurelle le 26/09/2012
+      // gestion de la touche entrée
+      document.getElementById('ctl00_UC_HEADER_UC_RECHERCHE_BTN_RECHERCHE').click(); //bouton OK
+    }
+    // gestion de la suppression d'un caractère
+    // sur la champ autocomplété de la recherche
+    function gestionSuppr(valeur) {
+      if (valeur == 0) {
+        document.getElementById('ctl00_UC_HEADER_UC_RECHERCHE_HID_RECH').value = 'S';
+      } else document.getElementById('ctl00_UC_HEADER_UC_RECHERCHE_HID_RECH').value = '';
+    }
+    </script>
+    <div class="search">
+      <input name="ctl00$UC_HEADER$UC_RECHERCHE$HID_RECH" type="hidden" id="ctl00_UC_HEADER_UC_RECHERCHE_HID_RECH" />
+      <input name="ctl00$UC_HEADER$UC_RECHERCHE$ACT_RECHERCHE" type="text" value="Rechercher un article ou une référence" id="ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHE" class="text" onkeypress="javascript:var touche = window.event ? event.keyCode : event.which; if(touche == 226 || touche == 60){event.returnValue = false; return false;}" onkeyup="javascript:var touche = window.event ? event.keyCode : event.which; if(touche == 13) {validation();} if(touche == 46 || touche == 8){gestionSuppr(0);}" onkeydown="javascript:var touche = window.event ? event.keyCode : event.which; if(touche == 46 || touche == 8){gestionSuppr(0);} else{gestionSuppr(1);}" onfocus="if(this.value=='Rechercher un article ou une référence'){ this.value = '';}" onblur="if(this.value==''){ this.value = 'Rechercher un article ou une référence';}" />
+      <input name="ctl00$UC_HEADER$UC_RECHERCHE$ACT_RECHERCHECache" type="hidden" id="ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHECache" />
+      <div id="ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHEResults" style="display:none;z-index:3000;"> </div>
+      <script type="text/javascript">
+      new AjaxDLLAC.Autocompleter("ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHE", "ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHEResults", "/tempsl_et_vous/Affiliation.aspx", "ctl00_UC_HEADER_UC_RECHERCHE_ACT_RECHERCHECache", {
+        minChars: 2,
+        widthDIV: -1,
+        frequency: 0
+      });
+      </script>
+      <span id="ctl00_UC_HEADER_UC_RECHERCHE_UPP_RECHERCHE">
+        <input type="submit" name="ctl00$UC_HEADER$UC_RECHERCHE$BTN_RECHERCHE" value="" onclick="ga('global.send', 'event', 'MoteurRecherche_HS', 'OK', document.location.pathname);ga('local.send', 'event', 'MoteurRecherche_HS', 'OK', document.location.pathname);" id="ctl00_UC_HEADER_UC_RECHERCHE_BTN_RECHERCHE" class="submit" /> </span>
+      <div id="ctl00_UC_HEADER_UC_RECHERCHE_UC_ATTENTE_PRG_UPP_PROGRESS" style="display:none;">
+        <div class="positionFixedAttente"></div>
+        <div class="GifAttente"></div>
+      </div>
+    </div>
+    <a href="http://tempslpreprod.as44099.com/fr/tempsl_et_vous/contact.aspx?val=A" id="ctl00_UC_HEADER_A_NOUS_CONTACTER" class="contact" title="873" onclick="ga('global.send', 'event', 'NousContacter_HS', 'NousContacter', document.location.pathname);ga('local.send', 'event', 'NousContacter_HS', 'NousContacter', document.location.pathname);">Nous contacter</a>
+    <div class="phone"> </div>
+    <div class="phone phoneFr">
+      <a id="ctl00_UC_HEADER_HL_TEL_FR" onclick="ga('global.send', 'event', 'NousContacter_HS', 'NumTel', document.location.pathname);ga('local.send', 'event', 'NousContacter_HS', 'NumTel', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/tempsl_et_vous/contact.aspx?val=A"></a>
+      <table border="0" cellpadding="0" cellspacing="0" style="display: inline-block; vertical-align: middle;">
+        <tr>
+          <td height="28" style="vertical-align: middle;" valign="middle">
+            <table border="0" cellpadding="0" cellspacing="0" style="vertical-align: middle;">
+              <tr>
+                <td style="vertical-align: middle;" valign="middle">
+                  <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="vertical-align: middle;">
+                    <tr>
+                      <td bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"></td>
+                    </tr>
+                    <tr>
+                      <td align="center" class="bd-left_1px_ccc num" height="24" valign="middle" style="vertical-align: middle; border-left-width: 1px; border-left-color: #CCCCCC; border-left-style: solid; background: url(/images/telephone/sva-left-innerglow.png) no-repeat left 0px; padding: 0 5px;">
+                        <p class="sva_num" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; font-style: normal; text-indent: 0; color: #AF007D; margin: 0; padding: 0; border: none; line-height: normal;">
+                          <span id="ctl00_UC_HEADER_UC_TELEPHONE_telNum" title="11">0 892 461 461</span>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"></td>
+                    </tr>
+                  </table>
+                </td>
+                <td bgcolor="#AF007D" style="vertical-align: middle;" valign="middle"> <img alt="" border="0" height="28" id="c2" src="/images/telephone/sva-c2_payant_prixAppel.png" width="8" style="display: block;" /> </td>
+                <td style="vertical-align: middle;" valign="middle">
+                  <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="110" style="vertical-align: middle;">
+                    <tr>
+                      <td bgcolor="#AF007D" height="1" style="vertical-align: middle;" valign="middle"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#AF007D" class="txt" height="26" style="vertical-align: middle; padding: 0 5px;" valign="middle">
+                        <p class="sva_txt" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; font-style: normal; text-indent: 0; line-height: 10px; color: #ffffff; margin: 0; padding: 0; border: none; line-height: normal;">Service
+                          <span id="ctl00_UC_HEADER_UC_TELEPHONE_currentPrix">0.45</span>€ / min + prix appel</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#AF007D" height="1" style="vertical-align: middle;" valign="middle"></td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="vertical-align: middle;" valign="middle">
+                  <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="8" style="vertical-align: middle;">
+                    <tr>
+                      <td bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"></td>
+                    </tr>
+                    <tr>
+                      <td class="right-innerglow" height="24" style="vertical-align: middle; border-right-style: solid; border-right-color: #CCCCCC; border-right-width: 1px; background: url(/images/telephone/sva-right-innerglow.png) no-repeat right;" valign="middle"></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#CCCCCC" height="1" style="vertical-align: middle;" valign="middle"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <input type="hidden" name="ctl00$UC_HEADER$UC_TELEPHONE$hf_is_in_footer" id="ctl00_UC_HEADER_UC_TELEPHONE_hf_is_in_footer" /> </div>
+    <script type="text/javascript" src="/js/HautMonCompte.js"></script>
+    <div class="account">
+      <div class="open">
+        <a href="http://tempslpreprod.as44099.com/fr/compte_client/compte-perso.aspx" id="ctl00_UC_HEADER_UC_MONCOMPTE_A_MON_COMPTE" title="1" onclick="ga('global.send', 'event', 'MonCompte_HS', 'MonCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', 'MonCompte', document.location.pathname);">MON COMPTE</a>
+        <div class="opendiv">
+          <div class="int">
+            <ul>
+              <li id="ctl00_UC_HEADER_UC_MONCOMPTE_LI_ACCES_COMPTE">
+                <a id="ctl00_UC_HEADER_UC_MONCOMPTE_HL_ACCES_COMPTE" title="3" onclick="ga('global.send', 'event', 'MonCompte_HS', 'AccedezCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', 'AccedezCompte', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/compte_client/identification.aspx">Accédez à votre compte</a>
+              </li>
+              <li id="ctl00_UC_HEADER_UC_MONCOMPTE_LI_SUIVI_COMMANDE">
+                <a id="ctl00_UC_HEADER_UC_MONCOMPTE_HL_SUIVI_COMMANDE" title="4" onclick="ga('global.send', 'event', 'MonCompte_HS', 'SuivezCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', 'SuivezCompte', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/compte_client/identification.aspx">Suivez vos commandes</a>
+              </li>
+              <li id="ctl00_UC_HEADER_UC_MONCOMPTE_LI_1ER_VISITE">
+                <a id="ctl00_UC_HEADER_UC_MONCOMPTE_HL_1ER_VISITE" title="6" class="red" onclick="ga('global.send', 'event', 'MonCompte_HS', '1erevisiteCompte', document.location.pathname);ga('local.send', 'event', 'MonCompte_HS', '1erevisiteCompte', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/compte_client/modif-compte.aspx">1ère visite?
+                  <br />Créez votre compte !</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br /> </div>
+    </div>
+    <div id="layer" style="display: none;">
+      <div id="boxDeconnexion">
+        <span id="ctl00_UC_HEADER_UC_MONCOMPTE_LAB_DECONNEXION" title="389" class="lib">Déconnexion</span>
+        <span id="ctl00_UC_HEADER_UC_MONCOMPTE_LAB_TEXTE_AVERTISSEMENT" title="390" class="sLib">Voulez-vous réellement vous déconnecter ?
+          <br /> Attention : toutes vos données non sauvegardées seront perdues !</span>
+        <a href="javascript:void(0)" id="ctl00_UC_HEADER_UC_MONCOMPTE_A_ANNULER" class="btnDeconnect" title="391">Annuler</a>
+        <a id="ctl00_UC_HEADER_UC_MONCOMPTE_A_SEDECONNECTER" class="btnDeconnect" title="392" href="javascript:__doPostBack('ctl00$UC_HEADER$UC_MONCOMPTE$A_SEDECONNECTER','')">Se d&#233;connecter</a>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/PanierHaut.js"></script>
+    <div id="PanierHaut" class="basket">
+      <div class="open">
+        <a href="http://tempslpreprod.as44099.com/fr/commande/panier.aspx" id="ctl00_UC_HEADER_UC_MONPANIER_A_MON_PANIER" title="7" onclick="ga('global.send', 'event', 'MonPanier_HS', 'MonPanier', document.location.pathname);ga('local.send', 'event', 'MonPanier_HS', 'MonPanier', document.location.pathname);">Mon panier</a>
+        <div id="ctl00_UC_HEADER_UC_MONPANIER_UP_PANIER">
+          <div class="opendiv">
+            <div class="int">
+              <!-- END panier non vide -->
+              <!-- START panier vide -->
+              <div id="ctl00_UC_HEADER_UC_MONPANIER_DIV_PANIER_VIDE" class="empty">
+                <span id="ctl00_UC_HEADER_UC_MONPANIER_LB_PANIER_VIDE" title="8">Votre panier est vide</span>
+                <a id="ctl00_UC_HEADER_UC_MONPANIER_HL_COMMANDE_RAPIDE" title="9" onclick="ga('global.send', 'event', 'MonPanier_HS', 'CdRefsCata', document.location.pathname);ga('local.send', 'event', 'MonPanier_HS', 'CdRefsCata', document.location.pathname);" href="http://tempslpreprod.as44099.com/fr/commande/commande-rapide.aspx">Je commande avec les références catalogue</a>
+              </div>
+              <!-- END panier vide -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ctl00_UC_HEADER_UC_MONPANIER_UP_NBR_ARTICLE">
+        <div class="num">
+          <span id="ctl00_UC_HEADER_UC_MONPANIER_LB_NBR_ARTICLES">0</span>&nbsp;
+          <span id="ctl00_UC_HEADER_UC_MONPANIER_LB_ARTICLES" title="10">article(s)</span>
+        </div>
+        <input type="hidden" name="ctl00$UC_HEADER$UC_MONPANIER$HID_NB_LIGNES_PRD" id="ctl00_UC_HEADER_UC_MONPANIER_HID_NB_LIGNES_PRD" value="0" /> </div>
+    </div>
+  </div>
+</body>
+
+</html>

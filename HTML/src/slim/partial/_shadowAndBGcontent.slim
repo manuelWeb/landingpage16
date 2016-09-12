@@ -1,0 +1,9 @@
+== Slim::Template.new('src/slim/partial/_master_bodyFormAndScript.slim').render
+#shadow
+  #contentBG
+    == Slim::Template.new('src/slim/partial/_header.slim').render
+    == Slim::Template.new('src/slim/partial/_menu.slim').render
+    / zone libre
+    / == Slim::Template.new('src/slim/partial/_zoneLibre_devRevenusPub.slim').render
+    == Slim::Template.new('src/slim/partial/_zoneLibre.slim').render
+

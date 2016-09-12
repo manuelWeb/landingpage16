@@ -1,0 +1,21 @@
+.positionFixedAttente {
+  position: absolute;
+  top: expression(documentElement.scrollTop + body.scrollTop + 'px');
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Version4/fondTrans.png);
+
+  /*filter: alpha(opacity:70);*/
+  z-index: 100;
+}
+
+.GifAttente {
+  position: absolute;
+  top: expression(documentElement.scrollTop + body.scrollTop + 500 + 'px');
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/Version4/attente.gif);
+  z-index: 102;
+}

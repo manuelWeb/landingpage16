@@ -1,0 +1,22 @@
+/** Déclarations de css pour l'updateprogress qui va permettre de couvrir la fenêtre pendant une action Ajax*/
+
+.positionFixedAttente {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Version4/fondTrans.png);
+  opacity: 0.9;
+  z-index: 100;
+}
+
+.GifAttente {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/Version4/attente.gif);
+  z-index: 102;
+}

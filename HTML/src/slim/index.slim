@@ -1,0 +1,23 @@
+doctype strict
+html[lang="fr"]
+  head#ctl00_HEAD_MASTER
+    title TLmaster
+    / == Slim::Template.new('partial/_master_head.slim').render
+
+    link[href="./css/styleV4.css" rel="stylesheet" type="text/css"]
+    link[href="./css/styleZoneLibre.css" rel="stylesheet" type="text/css"]
+
+  body#ctl00_MON_BODY
+    / form > #shadow > #contentBG >_header.slim + _menu.slim'
+    == Slim::Template.new('src/slim/partial/_shadowAndBGcontent.slim').render
+
+    / footer hors zone #contentBG
+    == Slim::Template.new('src/slim/partial/_footerZone1.slim').render
+    == Slim::Template.new('src/slim/partial/_footerZone2.slim').render
+    == Slim::Template.new('src/slim/partial/_footerZone3.slim').render
+    == Slim::Template.new('src/slim/partial/_footerZone4.slim').render
+
+
+      / script[type="text/javascript"]
+      /   |  //
+      /   |  var IDBoutonRecherche = "ctl00_UC_HEADER_UC_RECHERCHE_BTN_RECHERCHE"; var IDBoutonNewsletter = "ctl00_UC_BAS_UC_NEWSLETTER_BTN_NEWSLETTER"; WebForm_AutoFocus('PB_BOUTON_FOCUS'); Sys.Application.add_init(function() { $create(Sys.UI._UpdateProgress, { "associatedUpdatePanelId": null, "displayAfter": 500, "dynamicLayout": true }, null, null, $get("ctl00_UC_HEADER_UC_RECHERCHE_UC_ATTENTE_PRG_UPP_PROGRESS")); }); Sys.Application.add_init(function() { $create(Sys.UI._UpdateProgress, { "associatedUpdatePanelId": null, "displayAfter": 500, "dynamicLayout": true }, null, null, $get("ctl00_UC_ATTENTE_PRG_UPP_PROGRESS")); }); //
