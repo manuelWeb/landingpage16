@@ -1,37 +1,48 @@
-/ shortkey to go styleZL.scss
-/ link[href="../scss/styleZoneLibre.scss" rel="stylesheet" type="text/css"]
+/ link href="../scss/styleZoneLibre.scss" rel="stylesheet" type="text/css"
 == Slim::Template.new('src/slim/var/_link_zoneLibre.slim').render
 #ctl00_ContentPlaceHolder1_DIV_SITEUNDER.zoneLibre
   #DIV_SITEUNDER
-
-    span.like-h1
-      | Titre de
-      br/
-      span
-        | Cliente Idéale !
-
-    span.sticker-csoa
-      img src="images/imgZL/sticker-csoa.png" alt=""/
-
-    / a.btn-zlaff href="/link-btn-zlaff"
-    /   | Proﬁtez-en vite !
-
-    .info-zl
-      p
-        | Votre
-        br
+    #boitesSweetAlice.news-wrap
+      p.info
+        | Votre 
         b
-          | CADEAU
-        br
-        | avec le code
+          | CADEAU 
+        | avec le code 
         span
           |  XXXX
-
-      a href==($link_cat_aff) onclick==($ga_cat_aff) target="_blank"
-        img src="images/imgZL/catCover.jpg" alt=""/
-      p
-        | Feuilletez le nouveau
-        br/
-        | catalogue !
-        a href==($link_cat_aff) onclick==($ga_cat_btn_aff) target="_blank"
-          |  cliquez ici
+        button.bt-codeaf href="#button_1" onclick="copieUtmToCookieToPutInBasket"
+          | J'utilise ce code
+      img src="images/imgZL/CSOA-CMC_1.jpg" alt=""
+      a.linkanchor1 href="#CSOA1"
+      a.linkanchor2 href="#CMC1"
+    
+    / premier kdo
+    .visuelkdo#CSOA1
+      img src="images/imgZL/CMCthumb1335926q.jpg" alt="" width="250" height="250"
+    .detailkdo
+      span.likh1 Votre 1er CADEAU
+      br
+      span.likh3 
+        b
+          | * Lot de 3 boîtes Sweet Alice<sup>®</sup>
+      ul.likhp
+        li
+          p
+            | Lot de 3 Boîtes Sweet Alice Longue Conservation </b>GRATUIT avec votre commande. Fabriquées dans un plastique très épais et dotées d’un joint haute densité, les Sweet Alice® n’ont pas d’égales quand il s’agit de veiller sur les qualités gustatives et nutritives de vos aliments. Leur secret ? Elles sont équipées d’un dispositif qui permet d’extraire l’air restant à l’intérieur. Ce sont les reines de la conservation sous vide : le seul procédé qui permet de garder vos aliments plus longtemps et de manière totalement saine, en évitant les phénomènes d’oxydation et la dégradation prématurée du contenu. Cerise sur le gâteau, les manipuler relève du jeu d’enfant. Quatre clapets, une valve centrale, une pompe adaptée… Et hop ! En deux temps, trois mouvements, le tour est joué. Essayez et vous pourrez vraiment goûter la différence !
+        li.spacetop Dimensions :
+        li 2 l = ø 19,5 cm x h 11,7 cm
+        li 1 l = ø 16,5 cm x h 10 cm
+        li 0,5 l = ø 13,5 cm x h 8,2 cm
+    / deuxième kdo
+    .visuelkdo#CMC1.cl
+      img src="images/imgZL/CSOAthumb2284917d.jpg" alt="" width="250" height="250"
+    .detailkdo
+      span.likh1 Votre 2ème CADEAU
+      br
+      span.likh3
+        b
+          | ** L’Ensemble de Cuisine Tablier + Gant Assortis
+      ul.likhp
+        li
+          p
+            | L’Ensemble de Cuisine Tablier + Gant Assortis 3€ seulement En remerciement de votre commande de 50 € ou plus. Voilà un Ensemble qui fleure bon la compétence. Laissez-le faire... Il saura vous aider en toutes circonstances. Vous devez verser, mixer, saupoudrer ? Le Tablier veille jalousement sur vos tenues préférées. Un plat brûlant à  sortir du four ? Le Gant vous prête aussitôt main forte. Avec ces 2 atouts majeurs, tous les ingrédients sont réunis pour offrir à votre maestria culinaire, l’éclat qu'elle mérite. Ne les laissez pas passer !

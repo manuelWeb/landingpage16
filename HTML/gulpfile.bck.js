@@ -23,6 +23,9 @@ var gulp         = require('gulp'),
     request      = require('request'),
     cheerio      = require('cheerio');
 
+    // replace      = require('gulp-inject-element'),
+    // dom          = require('gulp-dom'),
+
 // src & output
 var src = 'src/',
     des = 'HTML/dest/',
@@ -45,6 +48,7 @@ gulp.task('browserSync',function () {
 gulp.task('images', function() {
   'use strict';
   return gulp.src([src+'images/**/*.{png,jpg,gif,svg}'])
+  // .pipe(npm()) // img optimize
   .pipe(changed(img))
   .pipe(gulp.dest(img))
 });
@@ -57,11 +61,16 @@ gulp.task('sass', function() {
     // .pipe(sass())
     .pipe(sass({
       errLogToConsole: true,
+      // :nested :compact :expanded :compressed
       outputStyle: 'compact'
     }))
   .pipe(autoprefixer(['last 2 version', '> 1%', 'ie >= 8']))
   .pipe(changed(css))
+  // .pipe(sourcemaps.write())
   .pipe(sourcemaps.write('.maps'))
+  // .pipe(rename(function(path) {
+  //   path.dirname += "/../css";
+  // }))
   .pipe(gulp.dest('dest/css/'))
   .pipe(using())
   .pipe(browserSync.reload({stream: true }));
@@ -81,6 +90,10 @@ gulp.task('slim', function () {
     slimEnd = true;
     premailergo(slimEnd);
   })
+  // .pipe(rename(function(path) {
+  //   path.dirname += "/../";
+  // }))
+  // .pipe(gulp.dest('render')) // html folder
   .pipe(browserSync.reload({
     stream: true
   }))
@@ -91,6 +104,7 @@ function premailergo (slimEnd) {
 };
 
 gulp.task('dev',['browserSync','images','slim','sass'], function() {
+  // gulp.watch(src+'slim/*.slim',['browserSync','slim','images']);
   gulp.watch(src+'scss/*.scss',['slim','sass','images']);
   gulp.watch(src+'slim/*.slim',['slim','images']);
   gulp.watch(src+'slim/partial/*.slim',['slim','images']);
@@ -124,6 +138,12 @@ gulp.task('replaceSrc', function(){
     // del css map
     .pipe(replace(/\/\*.+?\*\//, '/* end of zoneLibre css */'))
     // del CR
+    // .pipe(replace(/(^\n)/, ''))
+    // .pipe(replace(/(.+)\n/, '$1'))
+    // .pipe(replace(/\n\n/, ''))
+    // .pipe(replace(/([\n]{2}|[\r]{2})(\n|)/, ''))
+    // .pipe(replace(/\n\n|\r\r/, '<CR>'))
+    // .pipe(replace(/^(?:[\t ]*(?:\r?\n|\r))+/, ''))
     .pipe(rename("index.css"))
     .pipe(gulp.dest('build/'))
     .pipe(using())
@@ -159,6 +179,16 @@ gulp.task('htmlOnWeb', function() {
         }
         console.log("The file was saved!");
       });
+      // jQuery selector
+      // var $ = cheerio.load(html);
+      // $('.centralEvent').each(function(i, element){
+        // var a = $(this).prev(); // affiche style de centralEvent
+        // console.log(a.text()); // en txt
+      
+      // $('.centralEvent').each(function(i, element){
+      //   var a = $(this).parent();
+      //   console.log(a.html());
+      // });
     }
   });
 });
@@ -168,6 +198,7 @@ gulp.task('html', function() {
   // extraction ecriture build/index.html
   // var fs = require('fs')
   var $ = require('cheerio')
+
   var htmlString = fs.readFileSync('build/index.html').toString()
   var parsedHTML = $.load(htmlString)
 
