@@ -73,7 +73,10 @@ $white: #fff;
       background-image: linear-gradient(to bottom, #0dfa00, #00cc1f);
     }
   }
-  .visuelkdo, .detailkdo {/* display: inline-block; */ float: left; margin-top: 30px; margin-bottom: 10px;}
+  .visuelkdo, .detailkdo {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 10px;}
   .visuelkdo {
     width: 29%;
     vertical-align: top;
