@@ -5,22 +5,24 @@ $title-bd-color: #fff; // #927100
 $tle-bd-w: 2px; // #927100
 $white: #fff;
 
-.zone1 {
-  clear: both;
-}
-.cl {
- clear: left;
-}
-#menu + .zoneLibre {
-  margin: 0 auto;
-}
+.zone1 {clear: both;}
+.cl {clear: left; }
+#menu + .zoneLibre {margin: 0 auto;}
+
 #DIV_SITEUNDER {
   position: relative;
   box-sizing: border-box;
   color: $white;
+  // à traiter en js par rapport au utm_campaign news
+  // #boitesSweetAlice, #jardiniere, #secheCheveux {
+  //   display: none;
+  // }
+  // #boitesSweetAlice {display: inherit;}
+
 
   .news-wrap {
     position: relative;
+    float: left;
     margin-top: 10px;
     line-height: 0;
     border: 1px solid $newsWrapColor;
