@@ -1,35 +1,32 @@
-// fct getUtm(argument-after-utm_)
+// 1-campaign utm_campaign de l'URL
+// 2-mailArray définition manuel pour comparaison
+var campaign  = getUtm('campaign'),
+    mailArray = ['boitesSweetAlice','jardiniere','secheCheveux'];
+// fct recup argument aprés:utm_arg dans l'URL
 function getUtm(arg) {
+	// filtre la chaine location.search entre utm_ et &
   var regex   = new RegExp('[\?&]utm_' + arg + '=([^&]*)'),
       results = regex.exec(location.search);
-  return results === null ? "" : results[1];
+  return results === null ? "utm_"+arg+" non renseigné" : results[1];
 }
-// Give the URL parameters variable names
-var campaign = getUtm('campaign');
-var medium   = getUtm('medium'); // etc
-
-// console.log(campaign);
-var mail1 = "boitesSweetAlice",
-		mail2 = "jardiniere",
-		mail3 = "secheCheveux",
-		mailArray = ['boitesSweetAlice','jardiniere','secheCheveux'];
-// mask tous les kdo
+// fct masquage(elements à masquer)
 function hide (elements) {
   elements = elements.length ? elements : [elements];
   for (var index = 0; index < elements.length; index++) {
     elements[index].style.display = 'none';
   }
 }
+// fct affichage(elmnt display:block)
 function show (element) {
-  // element ? elements : [elements];
   element = '#'+element;
   element = document.querySelectorAll(element)
-  console.log(element[0])
   element[0].style.display = 'block';
 }
-// alternative jquery $(document).ready() 
+// alternative JS vanilla à jquery $(document).ready() 
 window.onload = function() {
+	// masque tous les elmnts
 	hide(document.querySelectorAll('#boitesSweetAlice, #jardiniere ,#secheCheveux'));
+	// comparaison ID et utm
 	for (var i = 0; i < mailArray.length; i++) {
 		if (campaign === mailArray[i]){
 			show(mailArray[i]);
