@@ -1,5 +1,6 @@
 / link href="../scss/styleZoneLibre.scss" rel="stylesheet" type="text/css"
 == Slim::Template.new('src/slim/var/_link_zoneLibre.slim').render
+== Slim::Template.new('src/slim/var/_txt_zoneLibre.slim').render
 #ctl00_ContentPlaceHolder1_DIV_SITEUNDER.zoneLibre
   #DIV_SITEUNDER
     / news_1
@@ -10,10 +11,9 @@
           b
             | CADEAU 
           | avec le code 
-          span
-            |  XXXX
+          span == $codeNews[:un]
           / copieUtmToCookieToPutInBasket
-          button.bt-codeaf href="#button_1" onclick="createCookie('codeKdoNews', '602A', 7)"
+          button.bt-codeaf href="#button_1" onclick="createCookie('codeKdoNews', '#{$codeNews[:un]}', 7)"
             | J'utilise ce code
         img src="images/imgZL/CSOA-CMC_1.jpg" alt=""
         a.linkanchor1 href="#CSOA1"
@@ -26,16 +26,15 @@
         span.likh1 Votre 1er CADEAU
         br
         span.likh3 
-          b
-            | * Lot de 3 boîtes Sweet Alice<sup>®</sup>
+          b == $txtCsoa_news1[:h3]
         ul.likhp
           li
-            p
-              | Lot de 3 Boîtes Sweet Alice Longue Conservation </b>GRATUIT avec votre commande. Fabriquées dans un plastique très épais et dotées d’un joint haute densité, les Sweet Alice® n’ont pas d’égales quand il s’agit de veiller sur les qualités gustatives et nutritives de vos aliments. Leur secret ? Elles sont équipées d’un dispositif qui permet d’extraire l’air restant à l’intérieur. Ce sont les reines de la conservation sous vide : le seul procédé qui permet de garder vos aliments plus longtemps et de manière totalement saine, en évitant les phénomènes d’oxydation et la dégradation prématurée du contenu. Cerise sur le gâteau, les manipuler relève du jeu d’enfant. Quatre clapets, une valve centrale, une pompe adaptée… Et hop ! En deux temps, trois mouvements, le tour est joué. Essayez et vous pourrez vraiment goûter la différence !
+            p == $txtCsoa_news1[:p]
           li.spacetop Dimensions :
-          li 2 l = ø 19,5 cm x h 11,7 cm
-          li 1 l = ø 16,5 cm x h 10 cm
-          li 0,5 l = ø 13,5 cm x h 8,2 cm
+          ul
+            li 2 l = ø 19,5 cm x h 11,7 cm
+            li 1 l = ø 16,5 cm x h 10 cm
+            li 0,5 l = ø 13,5 cm x h 8,2 cm
       / deuxième kdo
       .visuelkdo#CMC1.cl
         img src="images/imgZL/CSOAthumb2284917d.jpg" alt="" width="250" height="250"
@@ -43,12 +42,10 @@
         span.likh1 Votre 2ème CADEAU
         br
         span.likh3
-          b
-            | ** L’Ensemble de Cuisine Tablier + Gant Assortis
+          b == $txtCmc_news1[:h3]
         ul.likhp
           li
-            p
-              | L’Ensemble de Cuisine Tablier + Gant Assortis 3€ seulement En remerciement de votre commande de 50 € ou plus. Voilà un Ensemble qui fleure bon la compétence. Laissez-le faire... Il saura vous aider en toutes circonstances. Vous devez verser, mixer, saupoudrer ? Le Tablier veille jalousement sur vos tenues préférées. Un plat brûlant à  sortir du four ? Le Gant vous prête aussitôt main forte. Avec ces 2 atouts majeurs, tous les ingrédients sont réunis pour offrir à votre maestria culinaire, l’éclat qu'elle mérite. Ne les laissez pas passer !
+            p == $txtCmc_news1[:p]
     
     / clear left
     .cl
@@ -60,13 +57,12 @@
           b
             | CADEAU 
           | avec le code 
-          span
-            |  XXXX
-          button.bt-codeaf href="#button_2" onclick="createCookie('codeKdoNews', '603A', 7)"
+          span == $codeNews[:deux]
+          button.bt-codeaf href="#button_2" onclick="createCookie('codeKdoNews', '#{$codeNews[:deux]}', 7)"
             | J'utilise ce code
         img src="images/imgZL/CSOA-CMC_1.jpg" alt=""
-        a.linkanchor1 href="#CSOA1"
-        a.linkanchor2 href="#CMC1"
+        a.linkanchor1 href="#CSOA2"
+        / a.linkanchor2 href="#CMC2" // pas de CMC > if... or while
       
       / premier kdo
       .visuelkdo#CSOA2
@@ -75,16 +71,10 @@
         span.likh1 Votre 1er CADEAU
         br
         span.likh3 
-          b
-            | * la jardiniere
+          b == $txtCsoa_news2[:h3]
         ul.likhp
           li
-            p
-              | Lot de 3 Boîtes Sweet Alice Longue Conservation </b>GRATUIT avec votre commande. Fabriquées dans un plastique très épais et dotées d’un joint haute densité, les Sweet Alice® n’ont pas d’égales quand il s’agit de veiller sur les qualités gustatives et nutritives de vos aliments. Leur secret ? Elles sont équipées d’un dispositif qui permet d’extraire l’air restant à l’intérieur. Ce sont les reines de la conservation sous vide : le seul procédé qui permet de garder vos aliments plus longtemps et de manière totalement saine, en évitant les phénomènes d’oxydation et la dégradation prématurée du contenu. Cerise sur le gâteau, les manipuler relève du jeu d’enfant. Quatre clapets, une valve centrale, une pompe adaptée… Et hop ! En deux temps, trois mouvements, le tour est joué. Essayez et vous pourrez vraiment goûter la différence !
-          li.spacetop Dimensions :
-          li 2 l = ø 19,5 cm x h 11,7 cm
-          li 1 l = ø 16,5 cm x h 10 cm
-          li 0,5 l = ø 13,5 cm x h 8,2 cm
+            p == $txtCsoa_news2[:p]
       / deuxième kdo if exits
       / .visuelkdo#CMC2.cl
       /   img src="images/imgZL/CSOAthumb2284917d.jpg" alt="" width="250" height="250"
@@ -109,31 +99,32 @@
           b
             | CADEAU 
           | avec le code 
-          span
-            |  XXXX
-          button.bt-codeaf href="#button_3" onclick="createCookie('codeKdoNews','604A', 7)"
+          span == $codeNews[:trois]
+          button.bt-codeaf href="#button_3" onclick="createCookie('codeKdoNews','#{$codeNews[:trois]}', 7)"
             | J'utilise ce code
         img src="images/imgZL/CSOA-CMC_1.jpg" alt=""
-        a.linkanchor1 href="#CSOA1"
-        a.linkanchor2 href="#CMC1"
+        a.linkanchor1 href="#CSOA3"
+        a.linkanchor2 href="#CMC3"
       
       / premier kdo
-      .visuelkdo#CSOA2
+      .visuelkdo#CSOA3
         img src="images/imgZL/CMCthumb1335926q.jpg" alt="" width="250" height="250"
       .detailkdo
         span.likh1 Votre 1er CADEAU
         br
         span.likh3 
-          b
-            | * le seche Cheveux <sup>®</sup>
+          b == $txtCsoa_news3[:h3]
         ul.likhp
           li
-            p
-              | Lot de 3 Boîtes Sweet Alice Longue Conservation </b>GRATUIT avec votre commande. Fabriquées dans un plastique très épais et dotées d’un joint haute densité, les Sweet Alice® n’ont pas d’égales quand il s’agit de veiller sur les qualités gustatives et nutritives de vos aliments. Leur secret ? Elles sont équipées d’un dispositif qui permet d’extraire l’air restant à l’intérieur. Ce sont les reines de la conservation sous vide : le seul procédé qui permet de garder vos aliments plus longtemps et de manière totalement saine, en évitant les phénomènes d’oxydation et la dégradation prématurée du contenu. Cerise sur le gâteau, les manipuler relève du jeu d’enfant. Quatre clapets, une valve centrale, une pompe adaptée… Et hop ! En deux temps, trois mouvements, le tour est joué. Essayez et vous pourrez vraiment goûter la différence !
-          li.spacetop Dimensions :
-          li 2 l = ø 19,5 cm x h 11,7 cm
-          li 1 l = ø 16,5 cm x h 10 cm
-          li 0,5 l = ø 13,5 cm x h 8,2 cm
+            p == $txtCsoa_news3[:p]
+          / boucle while tant que exist affiche dans li
+          li.spacetop Caractéristiques du sèche cheveux Milway® :
+          ul
+            li Puisssance plus
+            li Cordon d'alimentation : 1,50 m
+            li Coque ABS
+            li Anneau de suspension
+            li Poignée repliable
       / deuxième kdo
       .visuelkdo#CMC2.cl
         img src="images/imgZL/CSOAthumb2284917d.jpg" alt="" width="250" height="250"
@@ -141,9 +132,10 @@
         span.likh1 Votre 2ème CADEAU
         br
         span.likh3
-          b
-            | ** L’Ensemble trouse .......xxxx
+          b == $txtCmc_news3[:h3]
         ul.likhp
           li
-            p
-              | L’Ensemble de Cuisine Tablier + Gant Assortis 3€ seulement En remerciement de votre commande de 50 € ou plus. Voilà un Ensemble qui fleure bon la compétence. Laissez-le faire... Il saura vous aider en toutes circonstances. Vous devez verser, mixer, saupoudrer ? Le Tablier veille jalousement sur vos tenues préférées. Un plat brûlant à  sortir du four ? Le Gant vous prête aussitôt main forte. Avec ces 2 atouts majeurs, tous les ingrédients sont réunis pour offrir à votre maestria culinaire, l’éclat qu'elle mérite. Ne les laissez pas passer !
+            p == $txtCmc_news3[:p]
+  br.cl
+  br
+  br

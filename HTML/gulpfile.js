@@ -83,7 +83,7 @@ gulp.task('slim', function () {
   return gulp.src([src+'slim/*.slim']) // src+'*.slim', // pas de fichier sur :root
   .pipe(plumber())
   .pipe(slim( {pretty: true, indent: '4' })) // {read:false},
-  .pipe(changed('HTML/dest/'))
+  // .pipe(changed('HTML/dest/'))
   .pipe(using())
   .pipe(gulp.dest('dest/')) // slim folder
   // .on('end', browserSync.reload)
@@ -105,7 +105,8 @@ gulp.task('dev',['browserSync','images','script','slim','sass'], function() {
   gulp.watch([src+'js/*.js'],['script'])
   gulp.watch(src+'scss/*.scss',['slim','sass','images','script']);
   gulp.watch(src+'slim/*.slim',['slim','images','script']);
-  gulp.watch(src+'slim/partial/*.slim',['slim','images','script']);
+  gulp.watch(src+'**/*.slim',['slim','images','script']);
+  gulp.watch(src+'**/**/*.slim',['slim','images','script']);
   // gulp.start('build');
 });
 

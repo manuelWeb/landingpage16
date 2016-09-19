@@ -19,7 +19,6 @@ $white: #fff;
   // }
   // #boitesSweetAlice {display: inherit;}
 
-
   .news-wrap {
     position: relative;
     float: left;
@@ -94,15 +93,29 @@ $white: #fff;
       font: normal bold 21px arial;
     }
     .likh3 {
-
       font: normal normal 16px arial;
     }
+    /* ul li {
+    } */
     .likhp {
       margin-top: 10px;
       text-align: justify;
       font: normal normal 14px arial;
-      list-style: none;
-      .spacetop {margin-top: 5px;}
+      list-style-type: none;
+      .spacetop {
+        margin-top: 5px;
+        font-weight: bold;
+        &+ul{
+          // padding: 0 16px 0;
+          // list-style-position: outside;
+          // list-style-type: disc;
+          list-style-type: none;
+          li:before{
+            color: #555555;
+            content: "• ";
+          }
+        }
+      }
     }
   }
 }
