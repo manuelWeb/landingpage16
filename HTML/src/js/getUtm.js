@@ -1,4 +1,3 @@
-
 // fct getUtm(argument-after-utm_)
 function getUtm(arg) {
   var regex   = new RegExp('[\?&]utm_' + arg + '=([^&]*)'),
@@ -36,18 +35,4 @@ window.onload = function() {
 			show(mailArray[i]);
 		}
 	}
-	// if(campaign == mail2){
-	// 	show(mail2);
-	// };
 };
-// if(campaign == mail1){
-// 	show('#'+mail1)
-// }else if(campaign == mail2) {
-// 	show('#'+mail2)
-// 	// alert(mail2)
-// }else if(campaign == mail3){
-// 	show('#'+mail3)
-// 	// alert(mail3)
-// }else if(campaign == ""){
-// 	alert('campaign nok')
-// }
