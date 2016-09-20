@@ -69,7 +69,10 @@ $white: #fff;
     padding: 10px 20px;
     border: solid #ffffff 2px;
     text-decoration: none;
-    &:hover {
+    &:hover,
+    &:visited, {
+    &:actif, {
+    &:focus {
       background: #0dfa00;
       background-image: linear-gradient(to bottom, #0dfa00, #00cc1f);
     }
