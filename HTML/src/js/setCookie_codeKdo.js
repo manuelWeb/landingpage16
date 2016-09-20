@@ -1,5 +1,4 @@
-// set cookies vanilla javascript
-// @see http://ppk.developpez.com/tutoriels/javascript/gestion-cookies-javascript/
+// name of cookie, value of, days before he died
 function createCookie(name,value,days) {
 	if (days) {
 		var date = new Date();
