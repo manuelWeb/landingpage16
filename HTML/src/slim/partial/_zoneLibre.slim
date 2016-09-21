@@ -3,6 +3,8 @@
 == Slim::Template.new('src/slim/var/_txt_zoneLibre.slim').render
 #ctl00_ContentPlaceHolder1_DIV_SITEUNDER.zoneLibre
   #DIV_SITEUNDER
+    script type="text/javascript" src="./js/getUtm.js"
+    script type="text/javascript" src="./js/setCookie_codeKdo.js"
     / news_1
     #boitesSweetAlice
       .news-wrap
@@ -13,7 +15,7 @@
           | avec le code 
           span == $codeNews[:un]
           / copieUtmToCookieToPutInBasket
-          a.bt-codeaf href="#button_1" onclick="createCookie('codeKdoNews', '#{$codeNews[:un]}', 7)"
+          a.bt-codeaf href="#button_1" onclick="createCookie('codeKdoAffilia', '#{$codeNews[:un]}', 7)"
             | J'utilise ce code
         img src="images/imgZL/news_1.jpg" width="958" alt=""
         a.linkanchor1 href="#CSOA1"
@@ -31,10 +33,11 @@
           li
             p == $txtCsoa_news1[:p]
           li.spacetop Dimensions :
-          ul
-            li 2 l = ø 19,5 cm x h 11,7 cm
-            li 1 l = ø 16,5 cm x h 10 cm
-            li 0,5 l = ø 13,5 cm x h 8,2 cm
+          li
+            ul
+              li 2 l = ø 19,5 cm x h 11,7 cm
+              li 1 l = ø 16,5 cm x h 10 cm
+              li 0,5 l = ø 13,5 cm x h 8,2 cm
       / deuxième kdo
       .visuelkdo#CMC1.cl
         img src="images/imgZL/news1_thumb2.jpg" alt="" width="250" height="250"
@@ -58,7 +61,7 @@
             | CADEAU 
           | avec le code 
           span == $codeNews[:deux]
-          a.bt-codeaf href="#button_2" onclick="createCookie('codeKdoNews', '#{$codeNews[:deux]}', 7)"
+          a.bt-codeaf href="#button_2" onclick="createCookie('codeKdoAffilia', '#{$codeNews[:deux]}', 7)"
             | J'utilise ce code
         img src="images/imgZL/news_2.jpg" width="958" alt=""
         a.linkanchor1 href="#CSOA2"
@@ -100,7 +103,7 @@
             | CADEAU 
           | avec le code 
           span == $codeNews[:trois]
-          a.bt-codeaf href="#button_3" onclick="createCookie('codeKdoNews','#{$codeNews[:trois]}', 7)"
+          a.bt-codeaf href="#button_3" onclick="createCookie('codeKdoAffilia','#{$codeNews[:trois]}', 7)"
             | J'utilise ce code
         img src="images/imgZL/news_3.jpg" width="958" alt=""
         a.linkanchor1 href="#CSOA3"
@@ -119,12 +122,13 @@
             p == $txtCsoa_news3[:p]
           / boucle while tant que exist affiche dans li
           li.spacetop Caractéristiques du sèche cheveux Milway® :
-          ul
-            li Puisssance plus
-            li Cordon d'alimentation : 1,50 m
-            li Coque ABS
-            li Anneau de suspension
-            li Poignée repliable
+          li
+            ul
+              li Puisssance plus
+              li Cordon d'alimentation : 1,50 m
+              li Coque ABS
+              li Anneau de suspension
+              li Poignée repliable
       / deuxième kdo
       .visuelkdo#CMC2.cl
         img src="images/imgZL/news3_thumb2.jpg" alt="" width="250" height="250"
@@ -136,6 +140,6 @@
         ul.likhp
           li
             p == $txtCmc_news3[:p]
-  br.cl
+  br
   br
   br

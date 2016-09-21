@@ -115,7 +115,7 @@ gulp.task('dev',['browserSync','images','script','slim','sass'], function() {
 // replace ../images/src/ (css) & images/src/blabla (html)
 gulp.task('replaceSrc', function(){
   // cp dest/imgs/* in build/
-  gulp.src(['dest/images/imgZL/*.{png,jpg,gif,svg}'])
+  gulp.src(['dest/images/imgZL/*.{png,jpg,gif,svg}','dest/js/setCookie_codeKdo.js','dest/js/getUtm.js'])
     .pipe(gulp.dest('build/'))
     .pipe(using())
     .on('end', function() {
@@ -187,9 +187,21 @@ gulp.task('html', function() {
   // query for all elements with class 'foo' and loop over them
   parsedHTML('.zoneLibre').map(function(i, zoneL) {
     // the zoneL html element into a cheerio object (same pattern as jQuery)
-    zoneL = $(zoneL)
-    console.log(zoneL.html());
-    fs.writeFile("build/index.html", zoneL.html(), function(err) {
+    zoneL = $(zoneL);
+    zoneL = zoneL.html()
+    .replace('./js/getUtm.js', 'getUtm.js')
+    .replace('./js/setCookie_codeKdo.js', 'setCookie_codeKdo.js')
+    .replace(/(<img("[^"]*"|[^\/">])*)>/g, "$1 />")
+    .replace(/(<br[^\/])/, "<br />")
+    .replace(/<br>/g, "<br />")
+    .replace(/&apos;/g, "'")
+    .replace(/&#x20AC;/g, "&euro;")
+    .replace(/&#xE9;/g, "&eacute;")
+    .replace(/&#xC9;/g, "&Eacute;")
+    .replace(/&#xE8;/g, "&egrave;")
+    .replace(/&#xEF;/g, "&iuml;");
+    console.log(zoneL);
+    fs.writeFile("build/index.html", zoneL, function(err) {
       if (err) {
         return console.log(err);
       }

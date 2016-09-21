@@ -68,6 +68,9 @@ $white: #fff;
       background: #0dfa00;
       background-image: linear-gradient(to bottom, #0dfa00, #00cc1f);
     }
+    &:visited {
+      color: #6b1068;
+    }
   }
   .visuelkdo, .detailkdo {
     float: left;
@@ -100,11 +103,11 @@ $white: #fff;
       .spacetop {
         margin-top: 5px;
         font-weight: bold;
-        &+ul{
+        &+li ul{
           list-style-type: none;
           li:before{
             color: #555555;
-            content: "• ";
+            content: "-";
           }
         }
       }
