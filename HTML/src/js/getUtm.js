@@ -19,7 +19,8 @@ function hide (elements) {
 // fct affichage(elmnt display:block)
 function show (element) {
   element = '#'+element;
-  element = document.querySelectorAll(element)
+  // element = document.querySelectorAll(element)
+  element = $(element);
   element[0].style.display = 'block';
 }
 
@@ -28,8 +29,12 @@ $(function() {
    hide($('#boitesSweetAlice, #jardiniere ,#secheCheveux'));
     // comparaison ID et utm
     for (var i = 0; i < mailArray.length; i++) {
-      if (campaign === mailArray[i]){
+      var campaignexist = false
+      // campaign === mailArray[i] ? show(mailArray[i]) : show(mailArray[0])
+      if(campaign === mailArray[i]){
         show(mailArray[i]);
+      }else if(campaign ===""){
+        show(mailArray[0])
       }
     };
 });

@@ -13,11 +13,6 @@ $white: #fff;
   position: relative;
   box-sizing: border-box;
   color: $white;
-  // à traiter en js par rapport au utm_campaign news
-  // #boitesSweetAlice, #jardiniere, #secheCheveux {
-  //   display: none;
-  // }
-  // #boitesSweetAlice {display: inherit;}
 
   .news-wrap {
     position: relative;
@@ -42,7 +37,7 @@ $white: #fff;
   }
 
   .info {
-    line-height: initial;
+    line-height: 40px;
     padding: 10px;
     text-align: center;
     font: {
@@ -69,10 +64,7 @@ $white: #fff;
     padding: 10px 20px;
     border: solid #ffffff 2px;
     text-decoration: none;
-    &:hover,
-    &:visited, {
-    &:actif, {
-    &:focus {
+    &:hover {
       background: #0dfa00;
       background-image: linear-gradient(to bottom, #0dfa00, #00cc1f);
     }
@@ -81,6 +73,7 @@ $white: #fff;
     float: left;
     margin-top: 30px;
     margin-bottom: 10px;}
+
   .visuelkdo {
     width: 29%;
     vertical-align: top;
@@ -88,6 +81,7 @@ $white: #fff;
       border: 1px solid $newsWrapColor;
     }
     }
+
   .detailkdo {
     width: 71%;
     color: #000;
@@ -98,8 +92,6 @@ $white: #fff;
     .likh3 {
       font: normal normal 16px arial;
     }
-    /* ul li {
-    } */
     .likhp {
       margin-top: 10px;
       text-align: justify;
@@ -109,9 +101,6 @@ $white: #fff;
         margin-top: 5px;
         font-weight: bold;
         &+ul{
-          // padding: 0 16px 0;
-          // list-style-position: outside;
-          // list-style-type: disc;
           list-style-type: none;
           li:before{
             color: #555555;
