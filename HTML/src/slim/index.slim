@@ -19,3 +19,12 @@ html lang="fr"
     == Slim::Template.new('src/slim/partial/_footerZone2.slim').render
     == Slim::Template.new('src/slim/partial/_footerZone3.slim').render
     == Slim::Template.new('src/slim/partial/_footerZone4.slim').render
+
+    javascript:
+      hide(document.querySelectorAll('#boitesSweetAlice, #jardiniere ,#secheCheveux'));
+        // comparaison ID et utm
+        for (var i = 0; i < mailArray.length; i++) {
+          if (campaign === mailArray[i]){
+            show(mailArray[i]);
+          }
+        };
