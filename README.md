@@ -1,7 +1,14 @@
 ### TODO
-- html + style done do cp img and **zip all** 
+- **ajout val si cookie + ajout onclick :**
+- $('#ctl00_ContentPlaceHolder1_TB_CODE_KDO').val('M601');
+- $('#ctl00_ContentPlaceHolder1_A_VALIDER_CODE_KDO').attr('onclick', 'javascript:__doPostBack("ctl00$ContentPlaceHolder1$A_VALIDER_CODE_KDO","")');
+- **declencher evt :**
+- $('#ctl00_ContentPlaceHolder1_A_VALIDER_CODE_KDO').trigger('click');
+	- ou
+- $('#ctl00_ContentPlaceHolder1_A_VALIDER_CODE_KDO').get(0).click()
 
 ### DONE
+- html + style done do cp img and **zip all** 
 - **gulp scraping html**
   + test gulp-dom
 - renommer
