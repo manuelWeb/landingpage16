@@ -40,11 +40,6 @@ $(function() {
   // changer le contenu p.info au click
   $('.bt-codeaf').off().on('click' ,function(evt) {
     var code = readCookie('codeKdoAffilia');
-    $(this).parent().css('background-color','#00A51F').html('Votre code cadeau <span class="codeAfOk">'+code+'</span> a été ajouté à votre panier !')
-    // .children().replaceWith('<span>lmfdsk</span>');
-    // console.log(($(this).parent().html()))
+    $(this).parent().css('background-color','#00A51F').html('Votre code cadeau <span class="codeAfOk">'+code+'</span> a été ajouté à votre panier !');
   })
 });
-// alternative JS vanilla à jquery $(document).ready() 
-// document.addEventListener('DOMContentLoaded', function() {
-// }, false);
