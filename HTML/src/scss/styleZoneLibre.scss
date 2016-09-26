@@ -52,6 +52,9 @@ $white: #fff;
       border: 1px solid $white;
       background-color: #80327D;
     }
+    .codeAfOk {
+      background-color: #096b1b;
+    }
   }
   .bt-codeaf {
     margin-left: 20px;
@@ -67,9 +70,6 @@ $white: #fff;
     &:hover {
       background: #0dfa00;
       background-image: linear-gradient(to bottom, #0dfa00, #00cc1f);
-    }
-    &:visited {
-      color: #6b1068;
     }
   }
   .visuelkdo, .detailkdo {

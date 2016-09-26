@@ -35,6 +35,7 @@ var src = 'src/',
 gulp.task('browserSync',function () {
   'use strict';
   browserSync({
+    browser: 'chrome',
     server: {
       baseDir: 'dest/'
     }
