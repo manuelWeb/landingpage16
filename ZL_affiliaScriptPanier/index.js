@@ -1,4 +1,4 @@
-(function ief_var() {
+(function ief_readCookieAf() {
 	function readCookie(name) {
 		var nameEQ = name + "=";
 		var ca = document.cookie.split(';');
@@ -11,12 +11,12 @@
 	};
 	// recup code kdo ds le cookie codeKdoAffilia
 	var code = readCookie('codeKdoAffilia');
-	// ajout val dans champ code kdo
-	$('#ctl00_ContentPlaceHolder1_TB_CODE_KDO').val(code);
-	// ajout attr onclick sur lien ok du code cadeau
-	$('#ctl00_ContentPlaceHolder1_A_VALIDER_CODE_KDO').attr('onclick', 'javascript:__doPostBack("ctl00$ContentPlaceHolder1$A_VALIDER_CODE_KDO","")');
-	// declenchement evt click du btn OK > indiquez votre code
-	// test existence du cookie (éviter de déclencher un click sans ce dernier)
-	code ? $('#ctl00_ContentPlaceHolder1_A_VALIDER_CODE_KDO').trigger('click') : alert('noCodeAf')
-
-})();//end ief_var
+	if(code){
+		// ajout val dans champ code kdo
+		$('#ctl00_ContentPlaceHolder1_TB_CODE_KDO').val(code);
+		// ajout attr onclick sur lien ok du code cadeau
+		$('#ctl00_ContentPlaceHolder1_A_VALIDER_CODE_KDO').attr('onclick', 'javascript:__doPostBack("ctl00$ContentPlaceHolder1$A_VALIDER_CODE_KDO","")');
+		// declenchement evt click du btn OK > indiquez votre code
+		$('#ctl00_ContentPlaceHolder1_A_VALIDER_CODE_KDO').trigger('click');
+	}
+})();//end ief_readCookieAf
