@@ -22,17 +22,18 @@ $white: #fff;
     border: 1px solid $newsWrapColor;
     margin-bottom: 10px;
     background: $newsWrapColor;
-    .linkanchor1, .linkanchor2 {
+    .linkanchor1, .linkanchor2, .linkanchorSigle {
       position: absolute;
-      width: 265px;
-      height: 130px;
       // border: 1px solid #f00;
     }
+    .linkanchorSigle {
+      top: 62px; left: 0; width: 956px; height: 468px;
+    }
     .linkanchor1 {
-      top: 100px; left: 400px;
+      top: 62px; left: 0; width: 668px; height: 468px;
     }
     .linkanchor2 {
-      top: 230px; left: 736px; width: 220px;
+      top: 62px; left: 668px; width: 288px; height: 468px;
     }
   }
 
